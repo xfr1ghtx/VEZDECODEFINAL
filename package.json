@@ -1,0 +1,10 @@
+{
+  "name": "my_react_app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd ./api && npm start",
+    "client": "cd ./client && npm start"
+  }
+}
