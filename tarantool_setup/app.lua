@@ -45,3 +45,5 @@ search_meme = function(top_text, bottom_text)
     prep = box.prepare([[SELECT * FROM "memes" WHERE ("top_text" COLLATE "unicode_ci" LIKE ?) AND ("bottom_text" COLLATE "unicode_ci" LIKE ?) ORDER BY (length("top_text")+length("bottom_text")) LIMIT 1;]])
     return prep:execute({ '%' .. top_text .. '%', '%' .. bottom_text .. '%' })
 end
+
+--TODO get random tuple query
