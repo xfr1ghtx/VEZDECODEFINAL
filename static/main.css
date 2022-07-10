@@ -1,0 +1,13 @@
+#img {
+    max-width: 600px;
+    height: auto;
+}
+
+div {
+    margin: 10px;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px;
+}

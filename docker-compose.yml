@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  tarantool:
+    image: tarantool/tarantool:latest
+    environment:
+      TARANTOOL_USER_NAME: "admin"
+      TARANTOOL_USER_PASSWORD: "super_tarantool_password"
+    command: [ "tarantool", "/opt/tarantool/app.lua" ]
+    ports:
+      - "3301:3301"
+    volumes:
+      - /home/ubuntu/tarantool_volume:/var/lib/tarantool
+      - ./tarantool_setup:/opt/tarantool
